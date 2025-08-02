@@ -2,3 +2,13 @@ Installiert Datenbank Aplication als Docker Container und ist unter http://deine
 Vorraussetzung ist eine Intel basierte Synology mit dem Dockermanger  aus den Packet Quellen installiert.
 Install.sh dort hinein kopieren und auf der Console ausführen. Die TG daten können mit dem Update knopf heruntergeladen werden. Daten werden alle 30 Tage neu geladen.
 Diese Aplication wurde mit ChatGPT erstellt.
+
+
+docker run -d
+--name typenschein
+-p 5050:5000
+-v typenschein-data:/app/data:rw
+--restart unless-stopped
+beroliv/typenschein:latest
+
+Bitte nach start des Containers einige Zeit warten bis die Daten vom astra Server geladen wurden. !!
